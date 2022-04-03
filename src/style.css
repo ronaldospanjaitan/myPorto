@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li,
+ol,
+a {
+  text-decoration: none;
+}
+nav {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+nav .sideNav {
+  font-weight: 300;
+}
+
+.punchline-area .punchline {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+}
+.github-button {
+  @apply p-1.5;
+  background-color: darkslategray;
+}
+.lookingfor {
+  font-family: "Poppins", sans-serif;
+}
+h1 {
+  @apply text-5xl font-bold;
+}
+h2 {
+  @apply text-3xl font-semibold;
+}
+h3 {
+  @apply text-2xl font-semibold;
+}
+h4 {
+  @apply text-xl font-medium;
+}
+.lookingfor p,
+h3 {
+  @apply text-soften-black;
+}
+.lookingfor p {
+  @apply text-sm;
+}
+.tocv a:hover {
+  @apply text-deep-blue font-bold;
+}
+
+/* .whatcanido div:nth-child(1) {
+  @apply md:grid-flow-col;
+} */
