@@ -6,6 +6,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 ul,
@@ -23,7 +24,6 @@ nav .sideNav {
 }
 
 .punchline-area .punchline {
-  font-family: "Inter", sans-serif;
   font-weight: bold;
 }
 .github-button {
