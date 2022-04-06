@@ -15,26 +15,37 @@
   </head>
   <body>
     <main>
-      <nav class="flex flex-row flex-nowrap items-center justify-around py-3">
-        <span><a href="#">aldodd</a></span>
+      <nav id="desknav" class="flex flex-row flex-nowrap items-center justify-around py-20 sticky-top transition duration-500 drop-shadow md:drop-shadow-lg">
+        <span id="logo"><a href="#">aldodd</a></span>
         <div>
-          <a href="#"><i class="bi bi-list"></i></a>
-          <!-- <div class="flex-col">
-          <a href="#" class="mx-2 block">Home</a>
-          <a href="#" class="mx-2 block">About Me</a>
-          <span class="github-button rounded-full"><i class="bi bi-github text-slate-50"></i><a href="#" class="mx-2 text-slate-50">Visit GitHub</a></span>
-        </div> -->
+          <a href="#" class="mx-2 hidden md:inline-block">Home</a>
+          <a href="#" class="mx-2 hidden md:inline-block">About Me</a>
+          <div class="shrink hidden md:inline-block">
+            <span class="github-button rounded-full text-ghostwhite"><i class="bi bi-github"></i><a href="#" class="mx-2 text-ghostwhite">Visit GitHub</a></span>
+          </div>
+          <button href="javascript:void(0);" id="menu" class="inline-block md:hidden" onclick="dropdowns()">
+            <!-- <i class="bi bi-list text-2xl"></i> -->
+            <span><i class="bi bi-list"></i></span>
+          </button>
         </div>
       </nav>
-
-      <section class="punchline-area text-5xl w-screen h-screen flex flex-row">
-        <div class="punchline basis-1/4 p-5 md:m-auto">
-          <p class="py-1 text-soften-black leading-snug"><span class="bg-v-soft-blue text-rose-red py-2">Designs</span> every lines.</p>
-          <p class="py-1 text-soften-black leading-snug">Builds new meaning.</p>
-          <p class="py-1 text-soften-black leading-snug">Brings <span class="bg-v-soft-blue text-rose-red py-2">experience.</span></p>
+      <div class="flex flex-col">
+        <div id="myLinks" class="fixed pb-6 text-center space-y-4 border-b-2 boder-solid border-gray-300 hidden w-full">
+          <a href="#" class="mx-2 block">Home</a>
+          <a href="#" class="mx-2 block">About Me</a>
+          <div class="shrink">
+            <span class="github-button rounded-full text-ghostwhite"><i class="bi bi-github"></i><a href="#" class="mx-2 text-ghostwhite">Visit GitHub</a></span>
+          </div>
         </div>
-        <div class="w-1/2 h-1/2">
-          <img class="hidden w-fit h-fit md:inline-block" src="./img/cover.png" alt="" />
+      </div>
+      <section class="punchline-area text-5xl w-screen h-screen flex flex-row">
+        <div class="punchline text-soften-black text-center grow basis-full self-center p-5 md:m-auto md:text-left md:basis-1/4 md:grow-0">
+          <p class="py-1 leading-snug md:leading-normal"><span class="text-rose-red py-2 md:bg-v-soft-blue">Designs</span> every lines.</p>
+          <p class="py-1 leading-snug md:leading-normal">Builds new meaning.</p>
+          <p class="py-1 leading-snug md:leading-normal">Brings <span class="text-rose-red py-2 md:bg-v-soft-blue">experience.</span></p>
+        </div>
+        <div class="w-0 h-0 md:w-1/2 md:h-1/2">
+          <img class="hidden w-fit h-fit flex-none basis-0 md:flex-auto md:inline-block md:basis-3/4" src="./img/cover.png" alt="" />
         </div>
       </section>
 
@@ -74,12 +85,12 @@
           </div>
           <div class="order-2 p-10 md:order-3">
             <div>
-              <h4 class="py-3 md:text-3xl">Build the FrontEnd-side</h4>
+              <h4 class="py-3 md:text-3xl md:font-bold">Build the FrontEnd-side</h4>
               <p class="text-md">Create a responsive website with simplified view and good functionality. I'll build it with a popular JS Framework:React and sprinkles some CSS inside it</p>
             </div>
           </div>
           <div class="order-4 p-10 md:order-2">
-            <h4 class="py-3 md:text-3xl">Design the Prototype</h4>
+            <h4 class="py-3 md:text-3xl md:font-bold">Design the Prototype</h4>
             <p class="text-md">Want your website looks amazing and attractive elements within it? Leave it to me, I'll make sure you get the best of it</p>
           </div>
           <div class="order-3 w-1/2 md:order-3 md:p-10 md:w-full">
@@ -100,10 +111,7 @@
             <div class="form-group mb-6">
               <textarea class="form-control block w-full px-3 py-1.5 text-base font-normal border-gray-300 bg-transparent bg-clip-padding border border-solid rounded" rows="4" placeholder="Message"></textarea>
             </div>
-            <button
-              type="submit"
-              class="w-full px-6 py-2.5 border-2 text-ghostwhite border-soft-blue bg-transparent font-medium text-sm leading-tight uppercase rounded-3xl shadow-md hover:bg-soft-blue hover:shadow-lg transition duration-150 ease-in-out"
-            >
+            <button type="submit" class="w-full px-6 py-2.5 border-2 text-ghostwhite border-soft-blue bg-soft-blue font-medium text-sm leading-tight uppercase rounded-3xl shadow-md hover:shadow-lg transition duration-150 ease-in-out">
               submit
             </button>
           </form>
@@ -111,10 +119,12 @@
       </section>
       <section>
         <div class="medsoc text-center bg-white md:p-10">
-          <h2 class="text-rose-red text-4xl md:py-2">GET IN MORE PERSONAL?</h2>
-          <p class="text-soften-black">Find me out by visit my media social activites or you can just drop Hi! and I'll be sure to reply it soon immediately.</p>
-          <p class="text-soften-black">Don't hesitate to visit, I'll see you there.</p>
-          <div class="space-x-6 py-2 text-xl">
+          <h2 class="text-rose-red text-2xl pt-6 pb-3 md:text-4xl md:py-2">GET IN MORE PERSONAL?</h2>
+          <div class="text-sm md:text-lg">
+            <p class="text-soften-black">Find me out by visit my media social activites or you can just drop Hi! and I'll be sure to reply it soon immediately.</p>
+            <p class="text-soften-black hidden md:inline">Don't hesitate to visit, I'll see you there.</p>
+          </div>
+          <div class="space-x-6 py-2 text-md md:text-xl">
             <a href=""><i class="bi bi-facebook text-soften-black hover:text-rose-red"></i></a>
             <a href=""><i class="bi bi-linkedin text-soften-black hover:text-rose-red"></i></a>
             <a href=""><i class="bi bi-instagram text-soften-black hover:text-rose-red"></i></a>

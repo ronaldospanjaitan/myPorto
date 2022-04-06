@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 ul,
@@ -16,7 +17,6 @@ a {
   text-decoration: none;
 }
 nav {
-  font-family: "Poppins", sans-serif;
   font-weight: bold;
 }
 nav .sideNav {
@@ -30,9 +30,7 @@ nav .sideNav {
   @apply p-1.5;
   background-color: darkslategray;
 }
-.lookingfor {
-  font-family: "Poppins", sans-serif;
-}
+
 h1 {
   @apply text-5xl font-bold;
 }
@@ -54,6 +52,9 @@ h3 {
 }
 .tocv a:hover {
   @apply text-deep-blue font-bold;
+}
+.showoff {
+  display: block;
 }
 
 /* .whatcanido div:nth-child(1) {
