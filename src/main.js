@@ -17,7 +17,7 @@ function scrollFunction() {
     document.getElementById("myLinks").style.backgroundColor = "whitesmoke";
   } else {
     document.getElementById("desknav").style.backgroundColor = "transparent";
-    document.getElementById("desknav").style.padding = "20px 0";
+
     document.getElementById("desknav").style.padding = "auto";
     document.getElementById("myLinks").style.backgroundColor = "white";
   }
