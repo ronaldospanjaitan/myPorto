@@ -13,7 +13,7 @@ window.onscroll = function () {
 function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     document.getElementById("desknav").style.backgroundColor = "whitesmoke";
-    document.getElementById("desknav").style.padding = "20px 0";
+    document.getElementById("desknav").style.padding = "10px 0";
     document.getElementById("myLinks").style.backgroundColor = "whitesmoke";
   } else {
     document.getElementById("desknav").style.backgroundColor = "transparent";
